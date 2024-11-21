@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Escapista</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #boton-escapista {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            position: absolute;
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+
+<button id="boton-escapista">¡Atrápame!</button>
+
+<script>
+    const boton = document.getElementById("boton-escapista");
+
+    boton.addEventListener("mouseover", () => {
+        // Generar una posición aleatoria dentro de la ventana del navegador
+        const x = Math.random() * (window.innerWidth - boton.offsetWidth);
+        const y = Math.random() * (window.innerHeight - boton.offsetHeight);
+        
+        // Mover el botón a la nueva posición
+        boton.style.transform = `translate(${x}px, ${y}px)`;
+    });
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
